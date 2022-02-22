@@ -1,0 +1,57 @@
+{
+  "name": "pixelate-server",
+  "version": "0.0.1",
+  "description": "Serving images pixelated",
+  "main": "index.ts",
+  "scripts": {
+    "build": "npx tsc",
+    "lint": "npx eslint --config .eslintrc.js 'src/**/*.ts' --max-warnings 5",
+    "start": "node ./dist/index.js",
+    "dev": "npx nodemon ./src/index.ts",
+    "test": "npx jest --coverage",
+    "test:watch": "jest --watchAll",
+    "typecheck": "tsc --noEmit",
+    "generate": "graphql-codegen",
+    "ci:audit": "yarn audit-ci --high --report-type full --skip-dev --output-format json"
+  },
+  "keywords": [
+    "image",
+    "processor"
+  ],
+  "author": "Aleksi Turpeinen",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.50.0",
+    "axios": "0.25.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.2",
+    "multer": "^1.4.4",
+    "multer-s3": "^2.10.0",
+    "node-cache": "^5.1.2",
+    "ts-node": "^10.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.5",
+    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-typescript": "^7.15.0",
+    "@types/express": "^4.17.13",
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.9.1",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "@typescript-eslint/parser": "^5.7.0",
+    "audit-ci": "^5.1.2",
+    "aws-sdk": "^2.1071.0",
+    "babel-jest": "^27.2.0",
+    "eslint": "^8.4.1",
+    "eslint-config-prettier": "^8.2.0",
+    "eslint-import-resolver-typescript": "^2.4.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jest": "^25.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.2.0",
+    "jimp": "^0.16.1",
+    "nodemon": "^2.0.7",
+    "prettier": "^2.4.0",
+    "typescript": "^4.4.3"
+  }
+}
